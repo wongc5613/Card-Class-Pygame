@@ -1,18 +1,18 @@
 class Card:
     SUITS = ('Clubs', 'Diamonds', 'Hearts', 'Spades')
-    RANKS = ('narf', 'Ace', '2', '3', '4', '5', '6', '7',
+    VALS = ('narf', 'Ace', '2', '3', '4', '5', '6', '7',
              '8', '9', '10', 'Jack', 'Queen', 'King']
 
-    def __init__(self, suit=0, rank=0):
+    def __init__(self, suit=0, vals=0):
         self.suit = suit
-        self.rank = rank
+        self.vals = vals
 
     def __str__(self):
         """
           >>> print(Card(2, 11))
           Queen of Hearts
         """
-        return '{0} of {1}'.format(Card.RANKS[self.rank],
+        return '{0} of {1}'.format(Card.VALS[self.vals],
                                    Card.SUITS[self.suit])
 
 
